@@ -2,6 +2,8 @@
 
 Static marketing site for PetalKeep, designed to be hosted on GitHub Pages.
 
+Repository: `https://github.com/brianjmurray/petalkeep-site`
+
 ## Local Preview
 
 Open `index.html` directly in a browser, or run:
@@ -14,11 +16,7 @@ Then visit `http://localhost:8080`.
 
 ## GitHub Pages Setup
 
-1. Push this repository to GitHub.
-2. In the GitHub repository, open **Settings > Pages**.
-3. Set the source to **Deploy from a branch**.
-4. Choose your default branch and `/ (root)` folder.
-5. Save.
+GitHub Pages is enabled from the `main` branch and `/ (root)` folder.
 
 ## Custom Domain
 
@@ -30,12 +28,26 @@ petalkeep.app
 
 In Porkbun, configure DNS for `petalkeep.app`:
 
-- For an apex domain, add GitHub Pages `A` records.
-- Optionally add a `www` CNAME record pointing to your GitHub Pages host.
+- `A` record: host `@`, answer `185.199.108.153`
+- `A` record: host `@`, answer `185.199.109.153`
+- `A` record: host `@`, answer `185.199.110.153`
+- `A` record: host `@`, answer `185.199.111.153`
+- `CNAME` record: host `www`, answer `brianjmurray.github.io`
 
 Use Porkbun forwarding to redirect `petalkeep.com` to `https://petalkeep.app`, or point both domains at GitHub Pages and add the secondary domain in GitHub Pages settings if you prefer both to resolve directly.
 
-GitHub's Pages settings will show the exact host target once the repository exists on GitHub.
+After DNS propagates, return to **Settings > Pages** in GitHub and enable **Enforce HTTPS**.
+
+## Email
+
+The site currently links to `support@petalkeep.app`.
+
+For App Store submission, either:
+
+- Create a free Porkbun email forward from `support@petalkeep.app` to your personal inbox if receiving support mail is enough.
+- Create a hosted mailbox for `support@petalkeep.app` if you want replies to come from the custom PetalKeep address.
+
+Forwarding is enough for App Review, but a hosted mailbox looks more polished for customer support.
 
 ## App Store Connect URLs
 
