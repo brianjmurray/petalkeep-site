@@ -59,7 +59,5 @@ Use these values in App Store Connect:
 
 ## Launch Updates
 
-Before launch, replace placeholder links in `index.html`:
-
-- App Store links currently use `href="#"`.
-- Support uses `support@petalkeep.app`; make sure the mailbox exists.
+Before launch, confirm support uses `support@petalkeep.app` and make sure the
+mailbox exists.
